@@ -1,0 +1,2 @@
+part1 flag: TDCTF{easy_7o_solve123}
+part2 flag: TDCTF{easy_t0_solve412}

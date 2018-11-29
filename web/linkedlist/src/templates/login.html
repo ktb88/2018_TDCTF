@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		hello, $name! what command do you want to enter??
+		<hr />
+		<form action='' method='get'>
+			insert: 
+			<input type='hidden' name='p' value='insert'>
+			<input type='text' name='value' />
+			<input type='submit' value='submit!' />
+		</form>
+		<form action='' method='get'>
+			insert(priority): 
+			<input type='hidden' name='p' value='insert_first'>
+			<input type='text' name='value' />
+			<input type='submit' value='submit!' />
+		</form>
+		<form action='' method='get'>
+			delete: 
+			<input type='hidden' name='p' value='delete'>
+			<input type='number' name='key' />
+			<input type='submit' value='submit!' />
+		</form>
+		<form action='' method='get'>
+			json raw view: 
+			<input type='hidden' name='p' value='raw' />
+			<input type='submit' value='submit!' />
+		</form>
+		<form action='' method='get'>
+			reset: 
+			<input type='hidden' name='p' value='reset' />
+			<input type='submit' value='submit!' />
+		</form>
+		<hr />
+		$content
+	</body>
+</html>

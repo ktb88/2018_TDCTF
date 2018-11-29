@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      #MYSQL_ROOT_PASSWORD: dhsmfwjsurdmsanjajrwl
+      MYSQL_DATABASE: cat
+      MYSQL_USER: cat
+      MYSQL_PASSWORD: cat
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    ports:
+      - "9906:3306"
+  web:
+    image: php:7.2.2-apache
+    container_name: php_web
+    depends_on:
+      - db
+    volumes:
+      - ./src/:/var/www/html/
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true

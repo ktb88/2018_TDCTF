@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="features-icons bg-light text-center">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <h1 class="mb-5">Contact</h1>
+      </div>
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <form action="/submit">
+          <div class="form-row">
+            <div class="col-12 col-md-12 mb-2 mb-md-0">
+                <input type="email" name="email" class="form-control form-control-md mb-md-2" placeholder="Enter your email">
+                <input type="text" name='message' class="form-control form-control-md mb-md-2" placeholder="Enter your message">
+                <button type="submit" class="btn btn-block btn-md btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

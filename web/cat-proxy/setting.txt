@@ -1,0 +1,40 @@
+[ Server Environment ]
+- Ubuntu 16.04
+- PHP 7.0.X
+- apache2
+- mysql
+
+[ Apache2 ]
+Directory Listring Off.
+Hide PHP Version.
+
+[ PHP ]
+change database host in config.php (check your docker containter name)
+
+e.g.
+
+```
+$host = "cat-proxy_db_1"; -> "catproxy_db_1";
+```
+
+
+and Phar.readonly=Off in php.ini
+
+```bash
+# in cat-proxy php server
+echo "phar.readonly = off" > /usr/local/etc/php/conf.d/phar.ini
+```
+
+[ MySQL ]
+```sql
+CREATE DATABASE cat;
+use cat;
+CREATE TABLE users (id text, pw text, thumb text);
+CREATE TABLE flag (flag text);
+INSERT INTO flag VALUES ('TDCTF{W0W_Do_you_know_SSRF_Shiina_Mashiro_Kawaii}');
+INSERT INTO users VALUES ('admin','dhsmfdmsandjtdmfajrdjdigksk!','admin.png');
+```
+
+[ Caution ]
+Do not hide php version.
+Disable Directory Listing.

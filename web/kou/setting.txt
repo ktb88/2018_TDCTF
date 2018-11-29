@@ -1,0 +1,33 @@
+[ Server Environment ]
+- Ubuntu 16.04
+- PHP 7.0.X
+- apache2
+
+[ PHP Module ]
+cd ./modules
+
+phpize
+
+./configure
+
+make
+
+[ PHP7.0 ]
+mkdir /var/www/lib
+
+mv ./modules/kou.so /var/www/lib
+
+cat > kou.ini
+; configuration for php kou module
+; priority=20
+extension=/var/www/lib/kou.so
+
+
+phpenmod kou
+
+
+[ Apache2 ]
+sudo service apache2 restart
+
+[ Caution ]
+Do not hide php version.
